@@ -1,0 +1,12 @@
+
+	<div class="entry">
+		<%= image_tag(@one.image_url_1) %>
+		<h3><%= @one.title %></h3>
+		<%= @one.created_at %>
+		<br/>
+		
+		<%= sanitize(@one.content) %>
+		
+		<%= link_to "Go back to the main news", shownews_index_path %>
+	</div>
+

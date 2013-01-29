@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Pragprog Books Online Store</title>
+	
+	<%= stylesheet_link_tag "mainpage" %>
+	<%= javascript_include_tag "application" %>
+
+	<%= csrf_meta_tags %>
+</head>
+
+
+<body id="store">
+
+	<div id="header">
+		<div class="clearfix">
+			<a data-g-event="Nav" data-g-label="Logo" href="/"><img alt="Android" class="logo" height="16" src="/images/logo.png" width="114"></a>
+			<ul class="nav-x">
+			  <li>
+				<%= link_to "Internation Chinese Language Teacher Association", mainpage_index_path %>				
+			  </li>
+			  <li>
+				<a data-g-event="Nav" data-g-label="Discover Android" href="/about/">Association Description</a>
+			  </li>
+			  <li>
+				<%= link_to "News", shownews_index_path %>
+			  </li>
+			  <li>
+				<a data-g-event="Nav" data-g-label="Get Apps" href="//play.google.com/store">Contact Us</a>
+			  </li>
+			  <li>
+				<a data-g-event="Nav" data-g-label="Get Apps" href="//play.google.com/store">Join Us</a>
+			  </li>
+			</ul>
+
+		</div>
+		<div class="header-hline"></div>
+    </div>
+
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<div id="columns">
+		<div id="main">
+			<%= yield %>
+		</div>
+	</div>
+	
+	<div id="header">
+		<div class="header-hline"></div>
+		<div class="clearfix">
+			
+			<ul class="nav-x">
+			  <li>
+				Internation Chinese Language Teacher Association
+			  </li>
+			  <li>
+				<a data-g-event="Nav" data-g-label="Discover Android" href="/about/">Charter</a>
+			  </li>
+			  <li class="right">
+				<a data-g-event="Nav" data-g-label="Discover Android" href="/about/">Copyright 2013</a>
+			  </li>
+			</ul>
+
+		</div>
+    </div>	
+
+</body>
+</html>
