@@ -1,0 +1,39 @@
+<h1>Listing members</h1>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Realname</th>
+    <th>Gender</th>
+    <th>Date of birth</th>
+    <th>Phone</th>
+    <th>Qq</th>
+    <th>Current location</th>
+    <th>Resume url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @members.each do |member| %>
+  <tr>
+    <td><%= member.email %></td>
+    <td><%= member.password %></td>
+    <td><%= member.realname %></td>
+    <td><%= member.gender %></td>
+    <td><%= member.date_of_birth %></td>
+    <td><%= member.phone %></td>
+    <td><%= member.qq %></td>
+    <td><%= member.current_location %></td>
+    <td><%= member.resume_url %></td>
+    <td><%= link_to 'Show', member %></td>
+    <td><%= link_to 'Edit', edit_member_path(member) %></td>
+    <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Member', new_member_path %>

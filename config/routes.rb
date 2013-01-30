@@ -1,7 +1,13 @@
 Iclts::Application.routes.draw do
+  resources :members
+
+
   get "mainpage/index"
   get "mainpage/aboutus"
   get "mainpage/charter"
+  get "mainpage/joinus"
+  post "mainpage/create_member"
+  get "mainpage/show_member"
   
   get "shownews/index"
 
