@@ -1,6 +1,8 @@
 Iclts::Application.routes.draw do
   get "mainpage/index"
-
+  get "mainpage/aboutus"
+  get "mainpage/charter"
+  
   get "shownews/index"
 
   get "shownews/onenews"
