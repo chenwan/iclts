@@ -16,14 +16,7 @@ blockquote,q { quotes:"" ""; }
 	Page style
 */
 body { 
-	font:normal 62.5%/1.5 Helvetica, Arial, sans-serif;
-	letter-spacing:0;
-	color:#434343;
-	background:#efefef url(/images/background.png) repeat top center;
-	padding:20px 0;
-	position:relative;
-	text-shadow:0 1px 0 rgba(255,255,255,.8);
-	-webkit-font-smoothing: subpixel-antialiased;
+background:#eee;
 }
 
 #container {
@@ -171,32 +164,11 @@ body {
 
 #footer {
 	text-align:center;
-	width:580px;
-	margin-top:9px;
-	padding:4.5px 0 18px;
-	border-top:1px solid #dfdfdf;
+	width:100%;
+	position:fixed;
+	bottom:0;
+	border-top:1px solid rgb(26,26,26);
 }
-
-#footer p {
-	margin:4.5px 0;
-	font-size:1.0em;
-}
-
-/*
-	Anchors
-*/
-
-a:link,a:visited {
-	color:#599100;
-	text-decoration:none;
-}
-
-a:hover,a:active {
-	color:#599100;
-	text-decoration:underline;
-}
-
-
 
 /*
 */
@@ -227,53 +199,23 @@ li .right{
 	text-align: left;
 	width: auto;
 }
-
-.header-hline {
-	border-bottom-color: rgb(204, 204, 204);
-	border-bottom-style: solid;
-	border-bottom-width: 0.800000011920929px;
-	color: rgb(68, 68, 68);
-	display: block;
-	font-family: Roboto, arial, sans-serif;
-	font-size: 14.399999618530273px;
-	font-weight: normal;
-	height: 0px;
-	line-height: 20px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 15px;
-	max-width: 940px;
-	width: 940px;
-}
-.clearfix{
-color: rgb(68, 68, 68);
-display: block;
-font-family: Roboto, arial, sans-serif;
-font-size: 14px;
-font-weight: normal;
-height: 32px;
-line-height: 25px;
-width: 940px;
-}
 #header{
-color: rgb(68, 68, 68);
-display: block;
-font-family: Roboto, arial, sans-serif;
-font-size: 14px;
-font-weight: normal;
-height: 48px;
-line-height: 25px;
-margin-bottom: 0px;
-margin-left: 299.5px;
-margin-right: 299px;
-margin-top: 0px;
-max-width: 940px;
-padding-bottom: 0px;
-padding-left: 20px;
-padding-right: 20px;
-padding-top: 25px;
-position: relative;
-width: 940px;
-z-index: 1000;
+	background:rgba(26,26,26,0.5);
+	height:60px;
+	width:100%;
+	display:block;
+	text-align:center;
+	line-height:60px;
+	color:white;
+}
+#navigation a
+{
+	text-decoration:none;
+	color:white;
+	font-size:1.5em;
+	transition:0.5s;
+}
+#navigation a:hover
+{
+	color:#9ccdd9;
 }

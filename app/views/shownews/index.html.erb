@@ -2,8 +2,6 @@
 	<p id="notice" ><%= notice %></p>
 <% end %>
 
-<h1>Your Pragmatic Catalog</h1>
-
 <% @all_news.each do |news| %>
 	<div class="entry" >
 		<%= image_tag(news.image_url_1) %>

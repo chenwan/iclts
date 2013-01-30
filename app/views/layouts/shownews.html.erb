@@ -1,69 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Pragprog Books Online Store</title>
-	
-	<%= stylesheet_link_tag "depot" %>
-	<%= stylesheet_link_tag "mainpage" %>
-	<%= javascript_include_tag "default" %>
-	<%= csrf_meta_tags %>
-</head>
-<body id="store">
-	<div id="header">
-		<div class="clearfix">
-			<a data-g-event="Nav" data-g-label="Logo" href="/"><img alt="Android" class="logo" height="16" src="/images/logo.png" width="114"></a>
-			<ul class="nav-x">
+	<head>
+		<title>Pragprog Books Online Store</title>
+		
+		<%= stylesheet_link_tag "depot" %>
+		<%= stylesheet_link_tag "mainpage" %>
+		<%= javascript_include_tag "default" %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body id="store">
+		<div id="header">
+			<ul id="navigation">
 			  <li>
-				<%= link_to "Internation Chinese Language Teacher Association", mainpage_index_path %>
+				<a data-g-event="Nav" data-g-label="Logo" href="/">
+					<img alt="Android" class="logo" height="40" src="/images/logo.png" width="200">
+				</a>		
 			  </li>
 			  <li>
-				<a data-g-event="Nav" data-g-label="Discover Android" href="/about/">Association Description</a>
+				<a data-g-event="Nav" data-g-label="Discover Android" href="/about/">About Us</a>
 			  </li>
 			  <li>
 				<%= link_to "News", shownews_index_path %>
 			  </li>
 			  <li>
-				<a data-g-event="Nav" data-g-label="Get Apps" href="//play.google.com/store">Contact Us</a>
-			  </li>
-			  <li>
 				<a data-g-event="Nav" data-g-label="Get Apps" href="//play.google.com/store">Join Us</a>
 			  </li>
 			</ul>
-
 		</div>
-		<div class="header-hline"></div>
-    </div>
-	
-	<div id="columns">
-		<!--<div id="side">
-			<a href="http://www...." >Home</a><br />
-			<a href="http://www..../faq" >Questions</a><br />
-			<a href="http://www..../news" >News</a><br />
-			<a href="http://www..../contact" >Contact</a><br />
-		</div>-->
-		
-		<div id="main">
-			<%= yield %>
-		</div>
-	</div>
-	
-	<div id="header">
-		<div class="header-hline"></div>
-		<div class="clearfix">
-			
-			<ul class="nav-x">
+		<div id="columns">
+			<div id="main">
+				<%= yield %>
+			</div>
+			<div id="side">
+			</div>
+		</div>	
+		<div id="footer">
+			<ul>
 			  <li>
-				Internation Chinese Language Teacher Association
+				Forum
 			  </li>
 			  <li>
 				<a data-g-event="Nav" data-g-label="Discover Android" href="/about/">Charter</a>
 			  </li>
 			  <li class="right">
-				<a data-g-event="Nav" data-g-label="Discover Android" href="/about/">Copyright 2013</a>
+				<a data-g-event="Nav" data-g-label="Discover Android" href="/about/">Contact Us</a>
 			  </li>
 			</ul>
-
-		</div>
-    </div>	
-</body>
+		</div>	
+	</body>
 </html>
