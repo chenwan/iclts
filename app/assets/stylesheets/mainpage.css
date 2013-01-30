@@ -167,9 +167,28 @@ background:#eee;
 	width:100%;
 	position:fixed;
 	bottom:0;
-	border-top:1px solid rgb(26,26,26);
 }
-
+#footer li
+{
+	height:130px;
+	width:180px;
+	display:inline-block;
+	background:white;
+	text-align:center;
+	line-height:130px;
+	border-radius:5px;
+	padding:1em;
+	margin:1em 1em;
+	-moz-box-shadow:    3px -3px 3px 0px #ccc;
+	-webkit-box-shadow: 3px -3px 3px 0px #ccc;
+	box-shadow:         3px -3px 3px 0px #ccc;
+}
+#footer a
+{
+	text-decoration:none;
+	font-size:1.5em;
+	color:rgb(26,26,26);
+}
 /*
 */
 
@@ -204,15 +223,21 @@ li .right{
 	height:60px;
 	width:100%;
 	display:block;
-	text-align:center;
 	line-height:60px;
 	color:white;
+}
+#navigation
+{
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
 }
 #navigation a
 {
 	text-decoration:none;
 	color:white;
-	font-size:1.5em;
+	font-size:1.3em;
 	transition:0.5s;
 }
 #navigation a:hover
