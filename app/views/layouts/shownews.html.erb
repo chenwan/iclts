@@ -13,9 +13,9 @@
 		<div id="header">
 			<ul id="navigation">
 			    <li>
-					<a data-g-event="Nav" data-g-label="Logo" href="/mainpage/index">
-						<img alt="Android" class="logo" height="40" src="/images/logo.png" width="200">
-					</a>		
+					<%= link_to(image_tag('/images/huihui.jpg', :class => 'logo', :alt => "logo", :height => "50", :width => "50"), 
+							      url_for(:controller => 'mainpage', :action => 'index'), 
+								  :remote => true) %>		
 			    </li>
 			    <li>
 					<%= link_to "About Us", mainpage_aboutus_path %>
@@ -37,18 +37,8 @@
 			</div>
 		</div>	
 		
-		<div id="footer">
-			<ul>
-				<li>
-					<%= link_to "News", shownews_index_path %>
-				</li>
-				<li>
-					<%= link_to "Forum (N/A)", mainpage_index_path %>
-				</li>
-				<li class="right">
-					<%= mail_to "tangbo.gl@gmail.com", "Contact Us" %>
-				</li>
-			</ul>
+		<div id="this is the true footer">
+			2013 International Chinese Language Teacher Society. ALL RIGHTS RESERVED. 
 		</div>
 	</body>
 </html>
