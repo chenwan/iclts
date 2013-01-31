@@ -9,7 +9,7 @@
 		<%= csrf_meta_tags %>
 	</head>
 	
-	<body id="store">
+	<body id="news">
 		<div id="header">
 			<ul id="navigation">
 			    <li>
@@ -21,7 +21,7 @@
 					<%= link_to "About Us", mainpage_aboutus_path %>
 				</li>
 				<li>
-					<%= link_to "Charter", mainpage_charter_path %>
+					<%= link_to "News", shownews_index_path %>
 				</li>
 				<li>
 					<%= link_to "Join Us", mainpage_joinus_path %>
@@ -37,8 +37,23 @@
 			</div>
 		</div>	
 		
+<<<<<<< HEAD
 		<div id="this is the true footer">
 			2013 International Chinese Language Teacher Society. ALL RIGHTS RESERVED. 
+=======
+		<div id="footer">
+			<ul>
+				<li>
+					<%= link_to "Forum (N/A)", mainpage_index_path %>
+				</li>
+				<li>
+					<%= link_to "Charter", mainpage_charter_path %>
+				</li>
+				<li class="right">
+					<%= mail_to "tangbo.gl@gmail.com", "Contact Us" %>
+				</li>
+			</ul>
+>>>>>>> mainpage alpha done
 		</div>
 	</body>
 </html>
