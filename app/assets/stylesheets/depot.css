@@ -1,86 +1,3 @@
-/* Global styles */
-
-#store #notice {
-        color: #000;
-        border: 2px solid red;
-        padding: 1em;
-        margin-bottom: 2em;
-        background-color: #f0f0f0;
-        font: bold smaller sans-serif;
-}
-
-
-#store h1 {
-        font:  150% sans-serif;
-        color: #226;
-        border-bottom: 3px dotted #77d;
-}
-
-/* Styles for products/index */
-
-#product_list table {
-        border-collapse: collapse;
-}
-
-#product_list table tr td {
-        padding: 5px;
-        vertical-align: top;
-}
-
-#product_list .list_image {
-  width:        60px;
-  height:       70px;
-}
-
-#product_list .list_description {
-  width:        60%;
-}
-
-#product_list .list_description dl {
-        margin: 0;
-}
-
-#product_list .list_description dt {
-	color:        #244;
-	font-weight:  bold;
-	font-size:    larger;
-}
-
-#product_list .list_description dd {
-        margin: 0;
-}
-
-#product_list .list_actions {
-  font-size:    x-small;
-  text-align:   right;
-  padding-left: 1em;
-}
-
-#product_list .list_line_even {
-  background:   #e0f8f8;
-}
-
-#product_list .list_line_odd {
-  background:   #f8b0f8;
-}
-
-/* START:mainlayout */
-/* Styles for main page */
-
-#banner {
-  background: #9c9;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid;
-  font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
-  text-align: center;
-}
-
-#banner img {
-  float: left;
-}
-
 #columns {
 	width:800px;
 	margin-left:auto;
@@ -90,54 +7,42 @@
 
 #main {
 	width:100%;
+	margin-bottom:1em;
+	-moz-box-shadow: 0 0 5px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.1);
+	box-shadow: 0 0 5px 1px rgba(0,0,0,0.1);
 }
 
-/* END:mainlayout */
-
-/* An entry in the store catalog */
-
-#store  .entry {
+#news  .entry {
 	overflow: hidden;
-	padding:1.5em 2em;
-	border-bottom: 1px solid #eee;
+	padding:1em 2em;
 	background: white;
+	border-bottom:1px solid #9ccdd9;
 }
 
-#store  .title {
+#news  .title {
   font-size: 120%;
   font-family: sans-serif;
 }
 
-#store .entry img {
+#news .entry img {
   width: 80px;
   margin-right: 5px;
   margin-bottom: 5px;
   float: left;
 }
 
-
-#store .entry h3 {
- margin-top: 0;
- margin-bottom: 2px;
- color: #227;
+#news .entry h3 {
+	color:rgb(156,205,217);
+	font-size:1.5em;
+	display:inline;
 }
-
-#store .entry p {
- margin-top: 0.5em; 
- margin-bottom: 0.8em; 
+#news .entry .author
+{
+	color:#888;
+	float:right;
 }
-
-#store .entry .price_line {
- clear: both;
- margin-bottom: 0.5em;
-}
-
-#store .entry .add_to_cart {
-  position: relative;
-}
-
-#store .entry  .price {
-  color: #44a;
-  font-weight: bold;
-  margin-right: 2em;
+#news .entry p
+{
+	margin:10px 0;
 }
