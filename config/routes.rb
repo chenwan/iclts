@@ -8,6 +8,7 @@ Iclts::Application.routes.draw do
   get "mainpage/joinus"
   post "mainpage/create_member"
   get "mainpage/show_member"
+  get "mainpage/new_member"
   
   get "shownews/index"
 
