@@ -1,4 +1,4 @@
-#news #center{
+#news_list #center{
 	top:90px;
 	background:white;
 	-moz-box-shadow: 0 0 5px 0px rgba(0,0,0,0.2);
@@ -61,4 +61,9 @@
 .entry a:hover
 {
 	color:#d9c79c;
+}
+/* news */
+.news .entry img
+{
+	float:left;
 }
