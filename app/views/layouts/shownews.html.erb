@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Pragprog Books Online Store</title>
+		<title>iclts | news</title>
 		
 		<%= stylesheet_link_tag "depot" %>
 		<%= stylesheet_link_tag "mainpage" %>
@@ -11,38 +11,39 @@
 	
 	<body id="news">
 		<div id="header">
-			<ul id="navigation">
-			    <li>
-					<%= link_to(image_tag('/images/huihui.jpg', :class => 'logo', :alt => "logo", :height => "50", :width => "50"), 
-							      url_for(:controller => 'mainpage', :action => 'index'), 
-								  :remote => true) %>		
-			    </li>
-			    <li>
-					<%= link_to "About Us", mainpage_aboutus_path %>
-				</li>
-				<li>
-					<%= link_to "News", shownews_index_path %>
-				</li>
-				<li>
-					<%= link_to "Join Us", mainpage_joinus_path %>
-				</li>
-			</ul>
+			<div id="deco_line">
+			</div>
+			<div id="top_nav">
+				<div id="top_logo">
+					<a data-g-event="Nav" data-g-label="Logo" href="/mainpage/index">
+						<img alt="Android" class="logo" height="40" src="/images/logo.png">
+					</a>
+				</div>
+				<ul id="top_menu">
+					<li>
+						<%= link_to "About Us", mainpage_aboutus_path %>
+					</li>
+					<li>
+						<%= link_to "News", shownews_index_path %>	
+					</li>
+					<li>
+						<%= link_to "Join Us", mainpage_joinus_path %>
+					</li>
+				</ul>
+			</div>
 		</div>
 		
-		<div id="columns">
-			<div id="main">
+		<div id="center">
+			<div id="center_news">
 				<%= yield %>
 			</div>
-			<div id="side">
-			</div>
 		</div>	
-		
-<<<<<<< HEAD
-		<div id="this is the true footer">
-			2013 International Chinese Language Teacher Society. ALL RIGHTS RESERVED. 
-=======
+	
 		<div id="footer">
-			<ul>
+			<div id="copyright">
+				Copyright &copy; 2013 International Chinese Language Teacher Society. <br/>ALL RIGHTS RESERVED. 
+			</div>
+			<ul id="bottom_features">
 				<li>
 					<%= link_to "Forum (N/A)", mainpage_index_path %>
 				</li>
@@ -53,7 +54,6 @@
 					<%= mail_to "tangbo.gl@gmail.com", "Contact Us" %>
 				</li>
 			</ul>
->>>>>>> mainpage alpha done
 		</div>
 	</body>
 </html>

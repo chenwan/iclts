@@ -2,15 +2,18 @@
 	<p id="notice" ><%= notice %></p>
 <% end %>
 
-<h1>Your Pragmatic Catalog</h1>
-
 <% @all_news.each do |news| %>
 	<div class="entry" >
-		<%= image_tag(news.image_url_1) %>
-		<h3><%=h news.title %></h3>
-		<h3><%=h news.author %></h3>
-		<%= sanitize(truncate(news.content, :length => 100, :separator => ' ')) %>
-		
-		<%= link_to "Show full context", shownews_onenews_path(:id => news.id) %>
+		<div class="image">
+			<%= image_tag(news.image_url_1) %>
+		</div>
+		<div class="text">
+			<h3 class="title"><%=h news.title %></h3>
+			<span class="author"><%=h news.author %></span>
+			<p>
+				<%= sanitize(truncate(news.content, :length => 100, :separator => ' ')) %>
+			</p>
+			<%= link_to "Show full context", shownews_onenews_path(:id => news.id) %>
+		</div>
 	</div>
 <% end %>
