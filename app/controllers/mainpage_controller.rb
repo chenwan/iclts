@@ -37,7 +37,7 @@ class MainpageController < ApplicationController
         format.html { redirect_to mainpage_show_member_path(:id => @member.id), notice: 'Welcome to our family.'}
         format.json { render json: @member, status: :created, location: @member}
       else
-        format.html { render action: "new_member" }
+        format.html { render action: "joinus" }
         format.json { render json: @member.errors, status: :unprocessable_entity }
       end
     end
