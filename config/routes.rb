@@ -1,17 +1,23 @@
 Iclts::Application.routes.draw do
+  resources :comments
+
+
   resources :members
 
 
   get "mainpage/index"
   get "mainpage/aboutus"
   get "mainpage/charter"
+  
   get "mainpage/joinus"
   post "mainpage/create_member"
   get "mainpage/show_member"
-  get "mainpage/new_member"
+  
+  get "mainpage/leavecomment"
+  post "mainpage/create_comment"
+  get "mainpage/show_comment"
   
   get "shownews/index"
-
   get "shownews/onenews"
 
   resources :news
