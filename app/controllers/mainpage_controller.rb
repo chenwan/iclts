@@ -24,6 +24,23 @@ class MainpageController < ApplicationController
     end
   end
   
+    def check_email
+  #for email checking
+  
+    @member=Member.find_by_email(params[:member_email])     
+    if @member      
+      #json="\"#{params[:user_name]}\",false" 
+        json="false"	  
+    else
+     # json="\"#{params[:user_name]}\",true"   
+        json="true"	 
+    end
+	
+    respond_to do |format|     
+      format.js {render :text=>json}  
+      end
+  end
+  
   def create_member
     @member = Member.new(params[:member])
 

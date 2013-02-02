@@ -1,16 +1,19 @@
-# encoding: utf-8
+﻿# encoding: utf-8
 
 class Member < ActiveRecord::Base
   validates :email, :password, :realname, :gender, :date_of_birth, :phone, :current_location, :presence => true
-
+  
   validates :email, :presence   => true,
                     :uniqueness => true,
                     :length     => { :within => 6..40 }
                     
-  validates_length_of   :password, :within =>6..40,:message =>'',:allow_nil  => true
+  validates_length_of   :password, :within =>6..40,:message =>'$密码长度应在6~40之间',:allow_nil  => true
   
   GENDER_TYPES = ["Male", "Female"]
+  
   validates :gender, :inclusion => GENDER_TYPES
+  
+  validates_numericality_of :phone , :message=>'$联系方式应全部由数字组成',:allow_nil  => true
   
   attr_accessible :current_location, :date_of_birth, :email, :gender, :password, :phone, :qq, :realname, :resume_url
   
