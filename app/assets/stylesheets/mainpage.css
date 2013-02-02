@@ -61,11 +61,16 @@ body {
 	-webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.2);
 	   -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.2);
 	        box-shadow: 0 8px 6px -6px rgba(0,0,0,0.2);
+	transition: background 0.5s;
+	-moz-transition: background 0.5s;
+	-webkit-transition: background 0.5s;
+	-o-transition: background 0.5s;
 }
 #top_menu a
 {
 	text-decoration:none;
 	color:#9ccdd9;
+	font-weight:bold;
 }
 #top_menu li:hover
 {
@@ -75,7 +80,6 @@ body {
 {
 	color:white;
 }
-
 #center
 {
 	position:relative;
@@ -197,6 +201,7 @@ body {
 }
 #bottom_features li
 {
+	position:relative;
 	height:80px;
 	width:200px;
 	display:block;
@@ -207,12 +212,39 @@ body {
 	border-radius: 5px 40px 5px;
 	padding:1em;
 	margin-right:0.5em;
+	background-repeat:no-repeat;
+	background-size:50px auto;
+	background-position:180px 70px;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+#bottom_features li:hover
+{
+	background:#63b0c3;
+	background-repeat:no-repeat;
+	background-size:50px auto;
+	background-position:180px 70px;
+}
+#bottom_features #forum
+{
+	background-image:url(/images/forum.png);
+}
+#bottom_features #charter
+{
+	background-image:url(/images/charter.png);
+}
+#bottom_features #contact
+{
+	background-image:url(/images/contact.png);
 }
 #bottom_features a
 {
 	text-decoration:none;
 	font-size:1em;
-	color:rgb(26,26,26);
+	color:white;
+	font-weight:bold;
 }
 #bottom_features a:hover
 {
@@ -229,6 +261,7 @@ body {
 	text-align:right;
 	font-size:0.6em;
 }
+/* Common Container */
 #container
 {
 	background:white;
@@ -237,4 +270,33 @@ body {
 	-moz-box-shadow: 0 0 5px 0px rgba(0,0,0,0.2);
 	-webkit-box-shadow: 0 0 5px 0px rgba(0,0,0,0.2);
 	box-shadow: 0 0 5px 0px rgba(0,0,0,0.2);
+}
+/* Form */
+#form_wrapper
+{
+	display:table;
+}
+#form_left, #form_right
+{
+	display:table-cell;
+	vertical-align:middle;
+	padding:2em;
+}
+#form_wrapper .field
+{
+	padding-bottom:0.5em;
+}
+.action-button
+{
+	font-family: Century Gothic;
+	background:#9ccdd9;
+	padding:0.7em 1em;
+	color:white;
+	border:none;
+	font-weight:bold;
+}
+.action-button:hover
+{
+	background:rgb(26,26,26);
+	cursor:pointer;
 }

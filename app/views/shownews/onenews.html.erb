@@ -1,12 +1,11 @@
-
-	<div class="news entry">
-		<div class="image">
-			<%= image_tag(@one.image_url_1) %>
-		</div>
-		<h3 class="title"><%= @one.title %></h3>
-		<span class="author"><%= @one.created_at %></span>
-		<p><%= sanitize(@one.content) %></p>
-		
-		<%= link_to "Go back to the main news", shownews_index_path %>
+<div class="news entry">
+	<div class="image">
+		<%= image_tag(@one.image_url_1) %>
 	</div>
+	<h3 class="title"><%= @one.title %></h3>
+	<span class="author"><%= @one.created_at %></span>
+	<p><%= sanitize(@one.content) %></p>
+	
+	<%= link_to "Go back to the main news", shownews_index_path %>
+</div>
 

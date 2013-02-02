@@ -1,61 +1,65 @@
 ﻿<%=javascript_include_tag "jquery.validate","register"%>
 
 <%= form_for :member, :url => { :action => "create_member", :controller=>"mainpage"},:html=>{:id=>"signupform" } do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-    <div class="state"></div>
-		<div class="clear"></div>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-    <div class="state"></div>
-		<div class="clear"></div>
-  </div>
-  <div class="field">
-    <%= f.label :realname %><br />
-    <%= f.text_field :realname %>
-    <div class="state"></div>
-		<div class="clear"></div>
-  </div>
-  <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.select :gender, Member::GENDER_TYPES, :prompt => "Please select a gender" %>
-    <div class="state"></div>
-		<div class="clear"></div>
-  </div>
-  <div class="field">
-    <%= f.label :date_of_birth %><br />
-    <%= f.date_select :date_of_birth %>
-    <div class="state"></div>
-		<div class="clear"></div>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
-    <div class="state"></div>
-		<div class="clear"></div>
-  </div>
-  <div class="field">
-    <%= f.label :qq %><br />
-    <%= f.text_field :qq %>
-    <div class="state"></div>
-		<div class="clear"></div>
-  </div>
-  <div class="field">
-    <%= f.label :current_location %><br />
-    <%= f.text_field :current_location %>
-    <div class="state"></div>
-		<div class="clear"></div>
-  </div>
-  <div class="field">
-    <%= f.label :resume_url %><br />
-    <%= f.file_field :resume_url %>
-    <div class="state"></div>
-		<div class="clear"></div>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<div id="form_left">
+		<div class="field">
+		<%= f.label :email %><br />
+		<%= f.text_field :email %>
+		<div class="state"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="field">
+		<%= f.label :password %><br />
+		<%= f.password_field :password %>
+		<div class="state"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="field">
+		<%= f.label :realname %><br />
+		<%= f.text_field :realname %>
+		<div class="state"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="field">
+		<%= f.label :gender %><br />
+		<%= f.select :gender, Member::GENDER_TYPES, :prompt => "Please select a gender" %>
+		<div class="state"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="field">
+		<%= f.label :date_of_birth %><br />
+		<%= f.date_select :date_of_birth %>
+		<div class="state"></div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div id="form_right">
+		<div class="field">
+		<%= f.label :phone %><br />
+		<%= f.text_field :phone %>
+		<div class="state"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="field">
+		<%= f.label :qq %><br />
+		<%= f.text_field :qq %>
+		<div class="state"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="field">
+		<%= f.label :current_location %><br />
+		<%= f.text_field :current_location %>
+		<div class="state"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="field">
+		<%= f.label :resume_url %><br />
+		<%= f.file_field :resume_url %>
+		<div class="state"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="actions">
+			<%= f.submit :class => "action-button" %>
+		</div>
+	</div>
 <% end %>
