@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130201023040) do
+ActiveRecord::Schema.define(:version => 20130202060849) do
 
   create_table "comments", :force => true do |t|
     t.string   "name"
@@ -31,8 +31,12 @@ ActiveRecord::Schema.define(:version => 20130201023040) do
     t.string   "qq"
     t.string   "current_location"
     t.string   "resume_url"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "resume_url_file_name"
+    t.string   "resume_url_content_type"
+    t.integer  "resume_url_file_size"
+    t.datetime "resume_url_updated_at"
   end
 
   create_table "news", :force => true do |t|
