@@ -12,7 +12,7 @@ $(document).ready(function(){
                             return $('#member_email').val();
                         }
                     },
-                    url: "/check_email",
+                    url: "/mainpage/check_email",
                     type: "get"
                     
                 }
