@@ -38,39 +38,13 @@ $(document).ready(function(){
 			}
 		
         },
-        messages: {
-            "member[email]":{
-              required: "请输入有效的邮箱地址",
-			        email:"请输入有效的邮箱地址",
-			        remote: "已被使用"
-			      },
-            "member[password]":{
-               required: "请输入密码",
-
-                minlength: jQuery.format("至少输入 {0} 个字符")
-
-            },
-			"member[realname]":{
-			required: "请输入"
-			},
-			"member[phone]":{
-			required: "请输入",
-			number:"只能输入数字噢",
-			rangelength:"号码的位数应该是{0}位"
-			},
-			"member[resume_url]":{
-			required: "请上传word或者pdf格式的简历",
-			accept: "简历格式不对"
-			}
-        },
          errorPlacement: function(error, element) {
             
-                error.appendTo( element.next() );
+                error.appendTo( element.parent().next()  );
 
         },
         // specifying a submitHandler prevents the default submit, good for the demo
         submitHandler: function(form) {
-            alert("submitted!");
                         form.submit();
         },
         // set this class to error-labels to indicate valid fields
